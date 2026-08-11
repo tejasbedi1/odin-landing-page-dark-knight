@@ -1,0 +1,303 @@
+/* * {
+    outline: 1px solid orange; 
+} */
+
+/* AI TO CHECK */
+/*
+    - Naming conventions. How are they aS compared to industry standards ?. 
+        - Like Section 1 2 3 .. is that the coorect way ?
+    
+    - if the correct type slector has been used. AS compared to industry standards.
+        - Like we have so many classes is that right. 
+
+    - I feel like we have too many divs. IS that right in your opinion and as compared to industry ?
+
+    - Do we have repitions in css which were not needed ? 
+
+    - Is the css an apt size or is it too large as compared to a smartly written css ?
+
+    - Industry standard for indentation ?
+
+    - Some places I used margin, some places padding. In what sections should I have used something else ?
+
+    - Industry standard, is there a way/order properties are mentioned inside CSS ? OR is it up to the dev?
+
+    - I'm having to do a lot height + margins / height + padding additons everywhere to get the look just right. Is that the right way ?
+
+    - Metion redudant parts of the css also.
+
+    - Keep in mind this was created to learn HTML CSS using flexbox
+        - I havnt graduated to CSS grids OR 
+        - making completely responsive pages. I made it as responsive as I could with the knowledge I had.
+
+    - In section 2 I wanted to keep all the images in line and all the text also starting from the same position. I was able to make that happen. But is there a better way ?
+
+    - If you have recommendations of making it slightly more responsive with tech i know now. that would help.
+        - like i wanted to keep everything centered regardless of how much the screen is streached.
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Something like this can potencially help us limit the max size and make the 
+    page more responsive.
+    But I'm tired. So we are not going to brute force this in RN.
+  .container {
+  width: calc(100% - 48px);
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* HEADER */
+.site-header {
+    /* flex: 1 0 auto; - NA cause of height */
+
+    height: 96px;
+    background-color:#1F2937;
+    padding: 0 100px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+    font-weight: 700;
+    color: #F9FAF8;
+}
+
+ul {
+    list-style-type: none; /* Removes the bullet points */
+    padding: 0; /* Removes default left indentation */
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+a {
+    text-decoration: none;
+    
+    font-size: 20px;
+    font-weight: 300;
+    color: #E5E7EB
+}
+
+/* SECTION HERO */
+.hero {
+    /* flex: 5 0 auto; - NA cause of height */
+    height: 428px;
+    background-color:#1F2937;
+    padding: 0px 100px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #F9FAF8;
+    margin: 0; 
+    padding: 0;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    font-weight: 250;
+    color: #cdcdcdfd;
+    margin: 0; 
+    padding: 0;
+}
+
+.button {
+    height: 40px;
+    width: 150px;
+    background-color: #3882F6;
+    border-radius: 8px;
+    border-width: 0;
+    
+    font-size: 17px;
+    font-weight: 550;
+    color: #F9FAF8;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-right {
+    width: 500px;
+    /* height: auto; */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+/* SECTION HOOK */
+.hook {
+    /* flex: 6 0 auto; - NA cause of height */
+    height: 550px;   
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 50px 100px;
+}
+
+.hook-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+    margin: 0; 
+    padding: 0;
+}
+
+.hook-info-cards {
+    /* flex: initial; - NA cause of height */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-illustration {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #3882F6;
+    border-radius: 8px;
+}
+
+#info-ill-4 {
+    object-position: right;
+}
+
+.info-text {
+    text-align: center;
+    height: 100px;
+    
+    font-size: 15px;
+    font-weight: 400;
+    color: #1f2937be;
+}
+
+/* SECTION QUOTE */
+.quote {
+    /* flex: 5 0 auto; - NA cause of height */
+    height: 428px;
+    background-color: #E5E7EB;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quote-main {
+    /* margin: 0 150px; */
+    width: min(100% - 3rem, 900px);
+    margin-inline: auto;
+  
+    font-size: 36px;
+    font-weight: 150;
+    font-style: italic;
+    color: #1F2937;
+
+    margin-bottom: 0;
+}
+
+.quote-by {
+    /* margin: 0 170px; */
+    width: min(100% - 3.5rem, 860px);
+    margin-inline: auto;
+    
+    font-size: 24px;
+    font-weight: 600;
+    color: #1F2937;
+
+    text-align: right;
+}
+
+/* SECTION ACTION */
+.action {
+    /* flex: 5 0 auto; - NA cause of height */
+    height: 136px;
+    background-color: #3882F6;
+    border-radius: 10px;
+    margin: 112px 100px;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.action-text {
+    color: #F9FAF8;
+
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.action-text-content {
+    font-size: 16px;
+    font-weight: 300;
+    color: #E5E7EB;
+    margin: 0;
+}
+
+.action-button {
+    border: 2px solid #F9FAF8;
+}
+
+/* FOOTER */
+.site-footer {
+    /* flex: 1 0 auto; - NA cause of height */
+    height: 96px;
+    background-color:#1F2937;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 17px;
+    font-weight: 300;
+    color: #E5E7EB;
+}
